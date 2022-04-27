@@ -1,0 +1,55 @@
+@media print {
+    .print {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 15px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    background-color: teal;
+    border: 3px solid rgb(3, 27, 27);
+}
+
+.box{
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-top: 0px;
+    width: 40rem;
+    padding: 2rem;
+    line-height: 2.5rem;
+  
+}
+
+.box p{
+    color: black;
+    display: inline;
+    font-size: 1.9rem;
+}
+.box h2{
+    color: rgb(1, 24, 24);
+    display: inline;
+}
+
+.button-div a, .button-div a:hover{ 
+    
+    text-decoration: none;
+    color: white;
+}
+
+.contain{
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    border: 2px solid black;
+    border-top: 0;
+}

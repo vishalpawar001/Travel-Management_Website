@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <%- include("header") -%>
+    <div class="container1">
+      <% arr.forEach(function(element){%>
+        <div class="card box border " style="width: 18rem; height: 23rem;  ">
+          <img class="card-img-top img-fluid" src="../uploads/<%=element.imageName%> " alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= element.place %>
+            </h5>
+            <p class="card-text">
+              <%=element.description %>
+            </p>
+            <a href="/posts/<%= element.packageID %>" class="btn btn-info">View</a>
+          </div>
+        </div>
+        <% }) %>
+    </div>
+
+    <%- include("footer") -%>
+
+
+</body>
+<link rel="stylesheet" href="css/home.css">
+
+</html>

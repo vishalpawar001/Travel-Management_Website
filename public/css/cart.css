@@ -1,0 +1,45 @@
+
+.main-div{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-size: 10px;
+    background-color: blanchedalmond;
+
+}
+
+.griddiv{
+    font-size: 30px;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #f6cbff;
+    background-color: rgb(239, 226, 245);
+    border: 6px solid #560a6a;
+    line-height: 0rem;
+}
+
+.griddiv h2 , .griddiv p{
+    display: inline-block;
+
+}
+.griddiv h2{
+    margin-right: 1rem;
+}
+
+.griddiv button{
+    height: 40px;
+    border: 3px solid #560a6a ;
+    background-image: linear-gradient(to right , #f6cbff, #9e2fb9);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 500ms ease;   
+}
+
+.griddiv:hover{
+    background-image: linear-gradient(to bottom right , white, #f1d4f7, #b85acf);
+}
+
+.griddiv button:hover{
+    background-position: right;
+
+}
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <%- include("header") -%>   
+    <div class="main-div">
+    
+    <% for(var i=0;i<array1.length; i++){ %>
+        <%  for(var j=0; j<array2.length; j++){ %>
+            <% if(array1[i].packageID == array2[j].packID){ %>
+                
+           
+     <%          var total=0;      %>
+     <%          var finaltotal=0;      %>
+     <%          var food=0;    %>
+     <%          var travel=0;    %>
+     <%          var stay = array1[i].stayAmt;    %>
+     <%          var persons =array2[j].persons;    %>
+     <%          if(array2[j].travel==1){      %>
+     <%              travel+=array1[i].busAmt;    %>
+     <%          }else if(array2[j].travel==2){      %>
+     <%              travel+=array1[i].trainAmt;    %>
+     <%          }else{      %>
+     <%              travel+=array1[i].planeAmt;    %>
+     <%          }      %>
+     <%          if(array2[j].food==0){      %>
+     <%              total+=0 ;     %>
+     <%          } else{                     %>
+     <%              food+=array1[i].foodAmt;    %>
+     <%          }             %>
+     <%              %>
+     <%          total = (food + travel + stay)  ;        %>
+     <%          finaltotal = (food + travel + stay) *persons  %>
+     <div class="griddiv">
+
+         
+             
+             <h2>packageID :</h2> <p> <%=array1[i].packageID %></p> <br>
+             <h2>place :</h2> <p> <%=array1[i].place %></p> <br>
+             <h2>stay amount :</h2> <p> <%=array1[i].stayAmt %></p> <br>
+             <h2>no of persons :</h2> <p> <%=array2[j].persons %></p> <br>
+             <h2>no of days :</h2> <p> <%=array1[i].noOfDays %></p> <br>
+             <h2>date :</h2> <p> <%=array2[j].date %></p> <br>
+             <h2>travel cost : </h2> <p> <%=travel%>  </p> <br>
+             <h2>food cost : </h2> <p> <%=food%>  </p> <br>
+             <h2>stay cost : </h2> <p> <%=stay%>  </p> <br>
+             <h2>total cost per person : </h2> <p> <%=total%>  </p> <br>
+             <h2>total  : </h2> <p> <%=finaltotal%>  </p> <br>
+             
+                
+                
+                <form action="/payment" method="post" style="display: inline;" >
+                    <input type="number" name="payPackId" style="display: none" value= <%= array1[i].packageID %>>
+                    <input type="text" name="payUserId" style="display: none" value= <%= array2[j].userId %>>
+                    <input type="text" name="payPlace" style="display: none" value= <%= array1[i].place %> >
+                    <input type="text" name="payAmount" style="display: none" value= <%= array1[i].stayAmt %> >
+                    <input type="number" name="payPerson" style="display: none" value= <%= array2[j].persons %>> 
+                    <input type="number" name="payDays" style="display: none" value= <%= array1[i].noOfDays %>>
+                    <input type="text" name="date" style="display: none" value= <%= array2[j].date %>> 
+                    <input type="number" name="travel" style="display: none" value= <%= travel %> >
+                    <input type="number" name="food" style="display: none" value= <%= food %> >
+                    <input type="number" name="stay" style="display: none" value= <%= stay %> >
+                    <input type="number" name="total" style="display: none" value= <%= finaltotal %> >
+                    <button type="submit">Book Now </button>
+                </form>
+                
+                
+                
+                <form action="/delete_from_cart" method="post" style="display: inline;" >
+                    <input type="text" name="id" style="display: none" value= <%=array2[j]._id %> >                   
+                    <button type="submit" >Remove from Cart</button>
+                </form>
+                
+                
+            
+        </div>                       
+        <% } } }%>
+    </div>
+
+
+               
+            </body> 
+            </html>
+            

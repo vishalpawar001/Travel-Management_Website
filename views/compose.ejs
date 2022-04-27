@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/compose.css">
+          <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="sec">
+        <h1>compose</h1>
+    </div>
+    <div class="main">
+
+   
+    <div class="two">
+    <form name="myForm" action="/compose" enctype="multipart/form-data" method="POST">
+
+        Package ID     <input type="number" name="packageID" readonly="readonly" value=<%=pack_no%> > <br>
+        Tour Route <br><textarea name="place"  cols="30" rows="6" required> </textarea> <br>
+        Discription    <input type="text" name="description" required> <br>
+        no of days     <input type="number" name="noOfDays" required> <br>
+        Stay Amount    <input type="number" name="stayAmt" required> <br>
+        Food Amount    <input type="number" name="foodAmt" required> <br>
+        Bus Amount     <input type="number" name="busAmt" required> <br>
+        train Amount   <input type="number" name="trainAmt" required> <br>
+        Airplane Amount<input type="number" name="planeAmt" required> <br>
+        <div>
+            <label>Upload profile picture</label>
+            <input type="file" name="packImg" required />
+        </div>
+
+        <button type="submit"> submit</button>
+    </form>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec{
+    display: flex;
+    justify-content: center;
+}
+.main{
+    border: 3px solid black;
+    width: 50em;
+    margin-left: 20em;
+}

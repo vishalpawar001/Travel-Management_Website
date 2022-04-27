@@ -1,0 +1,68 @@
+
+body{
+   background-color: silver; 
+}
+.first{
+    display: flex;
+    justify-content: center;
+    background-color:#B1D0E0 ;
+}
+.contain{
+    width: 100%;  
+    background-color: silver;
+    display: flex;
+    align-items: center;
+    line-height: 0rem;
+    border: 2px solid black;
+}
+.contain input{
+    background-color: transparent;
+    border: none;
+    
+}
+
+div{
+    display: inline-block;
+}
+.box{
+    width: 30em;
+    margin: 5em 20em;
+    background-color: silver;
+    border: 2px solid black;
+    padding: 2rem;
+}
+
+.spacer2{
+    display: inline-block;
+    
+}
+.pay {
+    box-sizing: border-box;
+    margin-left: 30rem;
+    width: 30%;
+    position: absolute;
+    top: 11rem;
+    left: 25rem;
+    background-color: whitesmoke;
+    height: auto;
+    padding: 23px;
+    border: 2px solid black;
+}
+
+.pay button{
+    width: 4rem;
+    height: 2rem;
+    background-color: blanchedalmond;
+    background-color: white;
+}
+.pay button:hover{
+    background-color: white;
+    background-color: blanchedalmond;
+}
+
+
+form  { display: table;      }
+.line { display: table-row;  }
+.spacer { display: table-cell; }
+.spacer2 { display: table-cell; }
+
