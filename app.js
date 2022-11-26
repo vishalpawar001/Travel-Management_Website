@@ -6,13 +6,14 @@ const mongoose = require("mongoose");
 const app = express();
 
 
+
 mongoose.connect("mongodb://localhost:27017/priceData");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 //global variables 
-var package_no = 1002;
+var package_no = 1002;  
 var currentUname;
 
 
@@ -126,7 +127,7 @@ allPackages.find({ packageID: { $gt: 0 } }, function (err, docs) {
     }
     else {
         if (docs.length === 0) {
-            firstPackage.save()
+            firstPackage.save();
             secondPackage.save();
         }
     }

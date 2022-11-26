@@ -3,7 +3,7 @@
     background-color:#FFF8F3 ;
     display: grid;
     border: 2px solid black;
-    grid-template-columns: auto auto auto auto;    
+    grid-template-columns: auto auto auto auto auto;    
 
 }
 
@@ -12,14 +12,11 @@
     border: 4px solid black;
     height: 20em;
     width: 20em;
-    margin: auto;
+    /* margin: auto; */
     margin-top: 5em;
 }
 
-.card{
-    border-radius: 20px;
-    border: 20px solid black;
-}
+
 
 .card-img-top{
     border-radius: 10px 10px 0 0;
@@ -27,7 +24,7 @@
 .card:hover{
     border: 2px solid black;
     border-radius: 10px;
-    background: linear-gradient(145deg, #9fbbca, #bddff0);
+    background: linear-gradient(145deg, #b6cedb, #b8c8d0);
     box-shadow:  2px 2px 0px #accad9,
                  -2px -2px 0px #b6d6e7;
     transition: box-shadow 250ms ease;
@@ -66,3 +63,11 @@
     background: #FFF8F3;
     border: solid 1px gainsboro;
    }
+
+   .card{
+    /* border-radius: 20px; */
+    border: 20px solid black;
+    margin: 10px 0 ;
+    box-shadow:  4px 4px 0px grey;
+                 /* -4px -4px 0px #b6d6e7; */
+}
